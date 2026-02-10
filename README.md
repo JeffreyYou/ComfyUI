@@ -23,18 +23,18 @@ python -c "import sys; print(sys.executable)"
 ```
 Upgrade pip
 ```
-python -m pip install --upgrade pip
+uv pip install --upgrade pip
 ```
 
 ### 2. Pytorch (NVIDIA)
 Install stable pytorch:
 ```
-python -m pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu130
+uv pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu130
 ```
 
 Install pytorch nightly instead (recommended)
 ```
-python -m pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu130
+uv pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu130
 ```
 
 Check pytorch version
@@ -54,13 +54,13 @@ python -m pip show torch
 
 Uninstall pytorch
 ```
-python -m pip uninstall torch
+uv pip uninstall torch
 ```
 
 ### 3. Dependency Setup
 
 ```
-python -m pip install -r requirements.txt
+uv pip install -r requirements.txt
 ```
 
 ### 4. Git Upstream (Optional)
@@ -75,7 +75,7 @@ git show remote
 
 Install the manager dependencies:
 ```
-python -m pip install -r manager_requirements.txt
+uv pip install -r manager_requirements.txt
 ```
 
 Enable the manager with the --enable-manager flag when running ComfyUI:
