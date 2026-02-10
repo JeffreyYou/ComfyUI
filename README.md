@@ -2,11 +2,15 @@
 
 ## ConfyUI
 
-### 1. Git Upstream
+### Virtual Env
+Setup virtual env using uv
 ```
-git remote add upstream git@github.com:Comfy-Org/ComfyUI.git
-git remote -v
-git show remote
+uv venv --python 3.12
+```
+Verify venv is installed and activated
+```
+python -c "import sys; print(sys.executable)"
+#...\ComfyUI\.venv\Scripts\python.exe
 ```
 
 ### 2. Pytorch (NVIDIA)
@@ -47,4 +51,12 @@ python main.py --enable-manager
 ## Run ConfyUI
 ```
 python main.py
+```
+
+Optional
+### Git Upstream
+```
+git remote add upstream git@github.com:Comfy-Org/ComfyUI.git
+git remote -v
+git show remote
 ```
