@@ -39,16 +39,11 @@ uv pip install --pre torch torchvision torchaudio --index-url https://download.p
 
 Check pytorch version
 ```
-python -m pip show torch
+uv pip show torch
 # Name: torch
 # Version: 2.11.0.dev20260209+cu130
-# Summary: Tensors and Dynamic neural networks in Python with strong GPU acceleration
-# Home-page: https://pytorch.org
-# Author:
-# Author-email: PyTorch Team <packages@pytorch.org>
-# License: BSD-3-Clause
-# Location: C:\Users\Jeffrey\AppData\Local\Programs\Python\Python313\Lib\site-packages
-# Requires: filelock, fsspec, jinja2, networkx, setuptools, sympy, typing-extensions
+# Location: C:\Users\Jeffrey\Desktop\AIGC\ComfyUI\.venv\Lib\site-packages
+# equires: filelock, fsspec, jinja2, networkx, setuptools, sympy, #typing-extensions
 # Required-by: torchvision
 ```
 
