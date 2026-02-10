@@ -29,17 +29,17 @@ python -m pip install --upgrade pip
 ### 2. Pytorch (NVIDIA)
 Install stable pytorch:
 ```
-pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu130
+python -m pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu130
 ```
 
 Install pytorch nightly instead (recommended)
 ```
-pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu130
+python -m pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu130
 ```
 
 Check pytorch version
 ```
-pip show torch
+python -m pip show torch
 # Name: torch
 # Version: 2.11.0.dev20260209+cu130
 # Summary: Tensors and Dynamic neural networks in Python with strong GPU acceleration
