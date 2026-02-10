@@ -1,16 +1,29 @@
 # ConfyUI Workflow Setup
 
-## ConfyUI
+## Table of Contents
+- [ConfyUI](#confyui)
+  - [1. Virtual Env](#1-virtual-env)
+  - [2. Pytorch (NVIDIA)](#2-pytorch-nvidia)
+  - [3. Dependency Setup](#3-dependency-setup)
+  - [4. Git Upstream (Optional)](#4-git-upstream-optional)
+- [ConfyUI-Manager](#confyui-manager)
+- [Run ConfyUI](#run-confyui)
 
-### Virtual Env
+## ConfyUI
+### 1. Virtual Env
 Setup virtual env using uv
 ```
 uv venv --python 3.12
 ```
 Verify venv is installed and activated
 ```
+.\.venv\Scripts\Activate.ps1
 python -c "import sys; print(sys.executable)"
 # ...\ComfyUI\.venv\Scripts\python.exe
+```
+Upgrade pip
+```
+python -m pip install --upgrade pip
 ```
 
 ### 2. Pytorch (NVIDIA)
@@ -41,13 +54,20 @@ pip show torch
 
 Uninstall pytorch
 ```
-pip uninstall torch
+python -m pip uninstall torch
 ```
 
 ### 3. Dependency Setup
 
 ```
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
+```
+
+### 4. Git Upstream (Optional)
+```
+git remote add upstream git@github.com:Comfy-Org/ComfyUI.git
+git remote -v
+git show remote
 ```
 
 ## ConfyUI-Manager
@@ -55,7 +75,7 @@ pip install -r requirements.txt
 
 Install the manager dependencies:
 ```
-pip install -r manager_requirements.txt
+python -m pip install -r manager_requirements.txt
 ```
 
 Enable the manager with the --enable-manager flag when running ComfyUI:
@@ -66,12 +86,4 @@ python main.py --enable-manager
 ## Run ConfyUI
 ```
 python main.py
-```
-
-Optional
-### Git Upstream
-```
-git remote add upstream git@github.com:Comfy-Org/ComfyUI.git
-git remote -v
-git show remote
 ```
